@@ -34,39 +34,39 @@ def normalize_steno(strokes_string):
     return tuple(normalized_strokes)
 
 STENO_KEY_NUMBERS = {'S-': '1-',
-                     'T-': '2-',
-                     'P-': '3-',
-                     'H-': '4-',
+                     'B-': '2-',
+                     'G-': '3-',
+                     'R-': '4-',
                      'A-': '5-',
                      'O-': '0-',
-                     '-F': '-6',
-                     '-P': '-7',
-                     '-L': '-8',
-                     '-T': '-9'}
+                     '-R': '-6',
+                     '-M': '-7',
+                     '-G': '-8',
+                     '-S': '-9'}
 
 STENO_KEY_ORDER = {"#": 0,
                    "S-": 1,
-                   "T-": 2,
-                   "K-": 3,
-                   "P-": 4,
-                   "W-": 5,
-                   "H-": 6,
-                   "R-": 7,
+                   "B-": 2,
+                   "T-": 3,
+                   "G-": 4,
+                   "D-": 5,
+                   "R-": 6,
+                   "L-": 7,
                    "A-": 8,
-                   "O-": 9,
+                   "U-": 9,
                    "*": 10,
-                   "-E": 11,
-                   "-U": 12,
-                   "-F": 13,
-                   "-R": 14,
-                   "-P": 15,
+                   "-O": 11,
+                   "-I": 12,
+                   "-R": 13,
+                   "-L": 14,
+                   "-M": 15,
                    "-B": 16,
-                   "-L": 17,
-                   "-G": 18,
-                   "-T": 19,
-                   "-S": 20,
-                   "-D": 21,
-                   "-Z": 22}
+                   "-G": 17,
+                   "-D": 18,
+                   "-S": 19,
+                   "-T": 20,
+                   "-N": 21,
+                   "-E": 22}
 
 
 class Stroke:
@@ -82,7 +82,7 @@ class Stroke:
 
     """
 
-    IMPLICIT_HYPHEN = set(('A-', 'O-', '5-', '0-', '-E', '-U', '*'))
+    IMPLICIT_HYPHEN = set(('A-', 'U-', '5-', '0-', '-O', '-I', '*'))
 
     def __init__(self, steno_keys) :
         """Create a steno stroke by formatting steno keys.
