@@ -278,7 +278,7 @@ def _translate_stroke(stroke, state, dictionary, callback):
     callback(undo, do, state.last())
     state.translations.extend(do)
 
-SUFFIX_KEYS = ['-S', '-G', '-Z', '-D']
+SUFFIX_KEYS = ['-G', '-T', '-N', '-E']
 
 def _find_translation(translations, dictionary, stroke):
     t = _find_translation_helper(translations, dictionary, stroke, [])
