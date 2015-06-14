@@ -24,10 +24,10 @@ import plover.machine.base
 # seen. Additionally, if there is no activity then the machine will
 # send a zero byte every few seconds.
 
-STENO_KEY_CHART = ("S-", "T-", "K-", "P-", "W-", "H-",  # 00
-                   "R-", "A-", "O-", "*", "-E", "-U",   # 01
-                   "-F", "-R", "-P", "-B", "-L", "-G",  # 10
-                   "-T", "-S", "-D", "-Z", "#")         # 11
+STENO_KEY_CHART = ("S-", "B-", "T-", "G-", "D-", "R-",  # 00
+                   "L-", "A-", "U-", "*", "-O", "-I",   # 01
+                   "-R", "-L", "-M", "-B", "-G", "-D",  # 10
+                   "-S", "-T", "-N", "-E", "#")         # 11
 
 
 class Stenotype(plover.machine.base.SerialStenotypeBase):
