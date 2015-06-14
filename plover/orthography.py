@@ -20,44 +20,44 @@ except IOError as e:
 RULES = [
     # == +ly ==
     # artistic + ly = artistically
-    (re.compile(r'^(.*[aeiou]c) \^ ly$', re.I),
-        r'\1ally'),
+    #(re.compile(r'^(.*[aeiou]c) \^ ly$', re.I),
+    #    r'\1ally'),
 
     # == +s ==
     # establish + s = establishes (sibilant pluralization)
-    (re.compile(r'^(.*(?:s|sh|x|z|zh)) \^ s$', re.I),
-        r'\1es'),
+   # (re.compile(r'^(.*(?:s|sh|x|z|zh)) \^ s$', re.I),
+   #     r'\1es'),
     # speech + s = speeches (soft ch pluralization)
-    (re.compile(r'^(.*(?:oa|ea|i|ee|oo|au|ou|l|n|(?<![gin]a)r|t)ch) \^ s$', re.I),
-        r'\1es'),
+   # (re.compile(r'^(.*(?:oa|ea|i|ee|oo|au|ou|l|n|(?<![gin]a)r|t)ch) \^ s$', re.I),
+   #     r'\1es'),
     # cherry + s = cherries (consonant + y pluralization)
-    (re.compile(r'^(.+[bcdfghjklmnpqrstvwxz])y \^ s$', re.I),
-        r'\1ies'),
+   # (re.compile(r'^(.+[bcdfghjklmnpqrstvwxz])y \^ s$', re.I),
+    #    r'\1ies'),
 
     # == y ==
     # die+ing = dying
-    (re.compile(r'^(.+)ie \^ ing$', re.I),
-        r'\1ying'),
+   # (re.compile(r'^(.+)ie \^ ing$', re.I),
+   #     r'\1ying'),
     # metallurgy + ist = metallurgist
-    (re.compile(r'^(.+[cdfghlmnpr])y \^ ist$', re.I),
-        r'\1ist'),
+    #(re.compile(r'^(.+[cdfghlmnpr])y \^ ist$', re.I),
+  #   ü   r'\1ist'),
     # beauty + ful = beautiful (y -> i)
-    (re.compile(r'^(.+[bcdfghjklmnpqrstvwxz])y \^ ([a-hj-xz].*)$', re.I),
-        r'\1i\2'),
+    #(re.compile(r'^(.+[bcdfghjklmnpqrstvwxz])y \^ ([a-hj-xz].*)$', re.I),
+     #   r'\1i\2'),
 
     # == e ==
     # write + en = written
-    (re.compile(r'^(.+)([t])e \^ en$', re.I), r'\1\2\2en'),
+    #(re.compile(r'^(.+)([t])e \^ en$', re.I), r'\1\2\2en'),
 
 
     # narrate + ing = narrating (silent e)
-    (re.compile(r'^(.+[bcdfghjklmnpqrstuvwxz])e \^ ([aeiouy].*)$', re.I),
-        r'\1\2'),
+    #(re.compile(r'^(.+[bcdfghjklmnpqrstuvwxz])e \^ ([aeiouy].*)$', re.I),
+     #   r'\1\2'),
 
     # == misc ==
     # defer + ed = deferred (consonant doubling)   XXX monitor(stress not on last syllable)
-    (re.compile(r'^(.*(?:[bcdfghjklmnprstvwxyz]|qu)[aeiou])([bcdfgklmnprtvz]) \^ ([aeiouy].*)$', re.I),
-        r'\1\2\2\3'),
+    #(re.compile(r'^(.*(?:[bcdfghjklmnprstvwxyz]|qu)[aeiou])([bcdfgklmnprtvz]) \^ ([aeiouy].*)$', re.I),
+   #     r'\1\2\2\3'),
 ]
 
 
