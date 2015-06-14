@@ -14,7 +14,7 @@ Stroke -- A data model class that encapsulates a sequence of steno keys.
 import re
 
 STROKE_DELIMITER = '/'
-IMPLICIT_HYPHENS = set('AOEU*50')
+IMPLICIT_HYPHENS = set('AUOI*50')
 
 def normalize_steno(strokes_string):
     """Convert steno strings to one common form."""
